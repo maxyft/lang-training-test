@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>English Vocabulary Trainer</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+<div class="container py-5">
+  <div class="d-flex flex-column align-items-center w-100 text-center mx-auto">
+    <h2 class="mb-5">English Vocabulary Trainer</h2>
+
+    <p class="lead mb-1">Form a valid English word using the given letters</p>
+    <p class="mb-5">Question <span id="current_question">1</span> of <span id="total_questions">10</span></p>
+
+    <div>
+      <div id="answer" class="bg-light mx-1 mb-3" style="height: 46px; border-radius: 6px; display: flex"></div>
+      <div id="letters" class="mb-3" style="display: flex; align-items: center"></div>
+    </div>
+
+    <div class="modal" id="restore">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>
+              You have an unfinished task from the previous lesson.
+              <br>
+              Do you want to restore it?
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary m-1" id="restore_btn_ok"> Yes </button>
+            <button class="btn btn-danger m-1" id="restore_btn_cancel" data-dismiss="modal"> No </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="stats" style="visibility: hidden">
+      <div class="mb-1">
+        <span> Total words without errors: </span>
+        <span id="clean_task_count"></span>
+      </div>
+      <div class="mb-1">
+        <span> Total numer of errors: </span>
+        <span id="errors_count"></span>
+      </div>
+      <div class="mb-1">
+        <span> The word with the most errors: </span>
+        <span id="most_broken_task"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
